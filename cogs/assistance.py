@@ -112,6 +112,17 @@ class Assistance(commands.Cog):
                 embed.description = "A complete Nintendo DSi homebrew guide, from stock to HiyaCFW"
                 await ctx.send(embed=embed)	
 
+    @commands.command()
+    @commands.cooldown(rate=1, per=30.0, type=commands.BucketType.channel)
+    async def signpost(self, ctx):
+        """Links to the eipHax signpost"""
+        embed = discord.Embed(title="Signpost", color=discord.Color(0xCE181E))
+        embed.set_author(name="eipHax", url="https://eiphax.tech/")
+        embed.set_thumbnail(url="https://cdn.discordapp.com/emojis/476607473957208066.png?v=1")
+        embed.url = "https://3ds.eiphax.tech/signpost.html"
+        embed.description = "The 3DS signpost. You can find info about 3DS homebrew here."
+        await ctx.send(embed=embed)
+                               
     @commands.command(aliases=['finalizing'])
     @commands.cooldown(rate=1, per=30.0, type=commands.BucketType.channel)
     async def finalize(self, ctx):
