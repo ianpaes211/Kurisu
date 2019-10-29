@@ -472,6 +472,16 @@ re-read the guide steps 2 or 3 times before coming here.
         await self.simple_embed(ctx, """
                     Got a problem with your SD card? Find solutions in [this guide](https://3ds.eiphax.tech/sd.html)
                     """, title="SD Troubleshooter")
+                                
+    @commands.command()
+    @commands.cooldown(rate=1, per=15.0, type=commands.BucketType.channel)
+    async def faketik(self, ctx):
+        """Faketik"""
+        await self.simple_embed(ctx, """
+                               Faketik-generates fake tickets to make disappeared apps show up on the HOME Menu. 
+                               Put faketik.3dsx in the 3ds folder on your SD card.
+                               
+                               [Download](https://github.com/ihaveamac/faketik/releases)
 
     @commands.command()
     @commands.cooldown(rate=1, per=30.0, type=commands.BucketType.channel)
